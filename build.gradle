@@ -11,13 +11,26 @@ sourceCompatibility = '8'
 repositories {
 	mavenCentral()
 }
+
+
 jar {
 	manifest {
-		attributes(
-				'Main-Class': 'net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication'
-		)
+		attributes "Main-Class": "net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication"
+	}
+
+	from {
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
 	}
 }
+
+//jar {
+
+//	manifest {
+//		attributes(
+//				'Main-Class': 'net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication'
+//		)
+//	}
+//}
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
