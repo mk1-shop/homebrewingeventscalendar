@@ -17,10 +17,6 @@ jar {
 	manifest {
 		attributes "Main-Class": "net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication"
 	}
-
-	from {
-		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-	}
 }
 
 //jar {
