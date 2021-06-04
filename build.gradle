@@ -13,6 +13,15 @@ repositories {
 }
 
 
+springBoot {
+	mainClassName = 'net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication'
+}
+
+
+bootJar {
+	mainClassName = 'net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication'
+}
+
 //jar {
 //	manifest {
 //		attributes "Main-Class": "net.jamesspurlin.homebrewingeventscalendar.HomebrewingeventscalendarApplication"
